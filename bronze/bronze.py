@@ -1,3 +1,5 @@
+# use windows!
+
 import os
 
 def list_files():
