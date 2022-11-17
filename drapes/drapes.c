@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(char ** argv, int argc) {
+int main(int argc, char ** argv) {
 	printf("Starting.\n");
 
 	if (argc != 2) {
@@ -17,6 +17,7 @@ int main(char ** argv, int argc) {
 	printf("lowering permissions\n");
 	
 	setuid(1000); // UID of lower priv user
+	seteuid(1000);
 
 	system(argv[1]);
 	printf("done.\n");
